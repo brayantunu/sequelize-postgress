@@ -1,7 +1,9 @@
 import { Router } from "express";
-import { crearproyecto } from "../controllers/proyecto-controller.js";
+import { crearproyecto, getproyecto,deleteproyect, updateproyecto } from "../controllers/proyecto-controller.js";
 const router=Router()
 
-router.post('proyect',crearproyecto)
-
+router.post('/proyecto',crearproyecto)
+router.get('/proyecto', getproyecto)
+router.delete('/proyecto/:id', deleteproyect)
+router.put('/proyecto/:id',updateproyecto)
 export default router
